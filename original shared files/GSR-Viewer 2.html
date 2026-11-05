@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GSR Viewer</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: a working bench. Left rail picks channels, right side stacks one lane per channel on a shared sample axis. */
+:root {
+  --bg: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink2: #52514e;
+  --muted: #7a7872;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.10);
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --on-accent: #ffffff;
+  --wash: rgba(11, 11, 11, 0.045);
+  --warn: #8a5a00;
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #94928b;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
+    --s1: #3987e5; --s2: #d95926; --on-accent: #0b0b0b; --wash: rgba(255, 255, 255, 0.06); --warn: #e0a93b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #94928b;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255, 255, 255, 0.10);
+  --s1: #3987e5; --s2: #d95926; --on-accent: #0b0b0b; --wash: rgba(255, 255, 255, 0.06); --warn: #e0a93b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 14px; line-height: 1.45;
+  padding-block: 14px 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
+.app { max-width: 1500px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; }
+.top h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+.top .sub { color: var(--ink2); font-size: 13px; }
+.brand { display: flex; flex-direction: column; min-width: 0; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { border: 1px solid var(--border); background: var(--surface); padding: 7px 12px; border-radius: 6px; }
+.btn:hover { background: var(--wash); }
+.btn.primary { background: var(--s1); color: var(--on-accent); border-color: transparent; font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn.small { padding: 4px 9px; font-size: 12px; }
+
+.files { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 6px 4px 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); max-width: 100%; }
+.chip .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.chip .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.chip button { border: 0; background: transparent; color: var(--ink2); padding: 0 6px; border-radius: 999px; font-size: 16px; line-height: 1.2; }
+.chip button:hover { background: var(--wash); }
+
+.drop { border: 1.5px dashed var(--axis); border-radius: 10px; padding: 36px 20px; background: var(--surface); text-align: center; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.drop.over { border-color: var(--s1); background: var(--wash); }
+.drop h2 { margin: 0; font-size: 17px; }
+.drop p { margin: 0; color: var(--ink2); max-width: 62ch; }
+
+.work { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 14px; align-items: start; }
+.panel { border: 1px solid var(--border); background: var(--surface); border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 8px; position: sticky; top: 8px; max-height: calc(100vh - 24px); min-width: 0; }
+.panel input[type=search] { width: 100%; padding: 7px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); }
+.panel .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.panel label.chk { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink2); }
+.count { font-size: 12px; color: var(--muted); }
+.list { overflow: auto; flex: 1; min-height: 120px; margin: 0 -4px; padding: 0 4px; }
+.item { display: flex; align-items: center; gap: 8px; padding: 3px 4px; border-radius: 5px; font-size: 13px; }
+.item:hover { background: var(--wash); }
+.item input { flex: none; }
+.item .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1; }
+.badge { font-size: 10.5px; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; flex: none; }
+
+.content { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px 16px; border: 1px solid var(--border); background: var(--surface); border-radius: 10px; padding: 10px 12px; }
+.meta div { min-width: 0; }
+.meta .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.meta .v { font-size: 13.5px; overflow-wrap: anywhere; }
+.meta .wide { grid-column: 1 / -1; }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.tabs { display: inline-flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; background: var(--surface); }
+.tabs button { border: 0; background: transparent; padding: 6px 14px; }
+.tabs button[aria-selected=true] { background: var(--s1); color: var(--on-accent); font-weight: 600; }
+.readout { font-variant-numeric: tabular-nums; color: var(--ink2); font-size: 13px; }
+.spacer { flex: 1; }
+.dt { font-weight: 700; color: var(--ink); border: 1px solid var(--border); background: var(--surface); border-radius: 6px; padding: 4px 10px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dt.idle { font-weight: 400; color: var(--muted); }
+.ctl { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink2); }
+.ctl input { width: 64px; padding: 4px 6px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); }
+.ctl input.t { width: 82px; }
+
+.stage { border: 1px solid var(--border); background: var(--surface); border-radius: 10px; min-width: 0; }
+#scroller { overflow: auto; max-height: calc(100vh - 150px); border-radius: 10px; }
+#inner { width: 100%; }
+#pinned { position: sticky; top: 31px; z-index: 2; background: var(--surface); box-shadow: 0 2px 0 var(--axis); }
+#pinned:empty { display: none; }
+.pin { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; color: var(--ink2); flex: none; cursor: pointer; }
+.pin input { margin: 0; }
+.lh, .lstat { position: sticky; left: 0; width: var(--vw, 100%); }
+.ruler { position: sticky; top: 0; z-index: 3; background: var(--surface); border-bottom: 1px solid var(--grid); border-radius: 10px 10px 0 0; }
+.ruler canvas { display: block; width: 100%; height: 30px; }
+.lane { border-bottom: 1px solid var(--grid); }
+.lane:last-child { border-bottom: 0; }
+.lh { display: flex; align-items: baseline; gap: 8px; padding: 6px 10px 0; min-width: 0; }
+.lh .ln { font-weight: 600; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.lh .lu { color: var(--muted); font-size: 12px; flex: none; }
+.lh .sp { flex: 1; }
+.lh .vals { display: inline-flex; gap: 12px; font-variant-numeric: tabular-nums; font-size: 13px; flex: none; }
+.lh .vals b { font-weight: 700; display: inline-flex; align-items: center; gap: 5px; }
+.lh .vals i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.lh .x { border: 0; background: transparent; color: var(--muted); font-size: 16px; line-height: 1; padding: 0 4px; border-radius: 4px; }
+.lh .x:hover { background: var(--wash); color: var(--ink); }
+.lstat { padding: 0 10px; font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lane canvas { display: block; width: 100%; height: var(--laneh, 92px); touch-action: pan-y; cursor: crosshair; }
+.empty-lanes { padding: 28px 16px; text-align: center; color: var(--ink2); }
+
+.tablewrap { border: 1px solid var(--border); background: var(--surface); border-radius: 10px; overflow: auto; max-height: calc(100vh - 220px); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 5px 10px; text-align: left; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { position: sticky; top: 0; background: var(--surface); z-index: 2; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.nm { white-space: normal; min-width: 180px; }
+td .u { color: var(--muted); font-size: 12px; margin-left: 4px; }
+td.lab { cursor: text; }
+td.lab:hover { background: var(--wash); }
+td .edit { width: 150px; padding: 2px 5px; border: 1px solid var(--s1); border-radius: 4px; background: var(--bg); }
+.cb { width: 28px; }
+
+.note { font-size: 12.5px; color: var(--ink2); }
+details.note { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 8px 12px; }
+details.note summary { cursor: pointer; font-weight: 600; }
+details.note ul { margin: 8px 0 2px; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.status { min-height: 18px; font-size: 12.5px; color: var(--ink2); }
+.status.err { color: var(--warn); }
+
+@media (max-width: 900px) {
+  .work { grid-template-columns: minmax(0, 1fr); }
+  .panel { position: static; max-height: 46vh; }
+  .tablewrap { max-height: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+</head><body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <h1>GSR Viewer</h1>
+      <span class="sub">Read .GSR scan-tool recordings in your browser. Files are read on your device and never uploaded.</span>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="btnOpen" type="button">Open recording…</button>
+      <input id="file" type="file" multiple hidden>
+      <button class="btn" id="btnDemo" type="button">Try example data</button>
+    </div>
+  </header>
+
+  <div class="files" id="files"></div>
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+
+  <section class="drop" id="drop">
+    <h2>Drop a .GSR, .GSRZ or .MSR file here</h2>
+    <p>Drop two recordings to compare them, for example a customer's car against a known-good one. Channels are matched by name and drawn on the same lane.</p>
+    <p class="count">Or use “Try example data” to see how it works.</p>
+  </section>
+
+  <main class="work" id="work" hidden>
+    <aside class="panel" aria-label="Channels">
+      <input type="search" id="q" placeholder="Search channels" aria-label="Search channels">
+      <div class="row">
+        <button class="btn small" id="preChanging" type="button">Select changing</button>
+        <button class="btn small" id="preClear" type="button">Clear</button>
+      </div>
+      <div class="row">
+        <label class="chk"><input type="checkbox" id="onlyChanging"> Only channels that change</label>
+      </div>
+      <div class="count" id="selCount"></div>
+      <div class="list" id="list"></div>
+    </aside>
+
+    <section class="content">
+      <div class="meta" id="meta"></div>
+      <div class="bar">
+        <div class="tabs" role="tablist">
+          <button role="tab" id="tabGraph" aria-selected="true" type="button">Graph</button>
+          <button role="tab" id="tabValues" aria-selected="false" type="button">Values</button>
+        </div>
+        <span class="readout" id="readout"></span>
+        <button class="btn small" id="btnC2" type="button" title="Right-click on the graph also sets cursor 2. This button is for touch screens">Add cursor 2</button>
+        <span class="readout dt" id="delta"></span>
+        <span class="spacer"></span>
+        <label class="ctl">Time/div <input id="tdiv" type="number" step="0.1" min="0.05" placeholder="fit" title="Seconds per division, 10 divisions across the screen. Empty = fit the whole recording"> s</label>
+        <button class="btn small" id="btnFit" type="button">Fit</button>
+        <label class="ctl">Lane height <input type="range" id="laneh" min="40" max="400" step="4" value="92" style="width:110px;padding:0" title="Height of each lane in pixels"></label>
+        <label class="ctl">Seconds per sample <input id="ival" type="number" step="0.05" min="0.01" value="1"></label>
+        <label class="ctl">Record start <input class="t" id="tstart" type="text" placeholder="hh:mm:ss" inputmode="numeric"></label>
+        <label class="ctl" id="unitWrap" hidden><input type="checkbox" id="units" checked style="width:auto"> Show °F / MPH / psi like GDS</label>
+        <label class="ctl" id="offWrap" hidden>B offset (samples) <input id="boff" type="number" step="1" value="0"></label>
+        <button class="btn small" id="btnCsvSel" type="button">Export selected CSV</button>
+        <button class="btn small" id="btnCsvAll" type="button">Export all CSV</button>
+      </div>
+
+      <div id="graphView" class="stage">
+        <div id="scroller"><div id="inner">
+          <div class="ruler"><canvas id="ruler"></canvas></div>
+          <div id="pinned"></div>
+          <div id="lanes"></div>
+        </div></div>
+      </div>
+      <div id="valuesView" class="tablewrap" hidden>
+        <table id="tbl"></table>
+      </div>
+
+      <details class="note">
+        <summary>How values are read</summary>
+        <ul>
+          <li>Each channel's scale, offset, unit and signedness come from the recording's own channel table, so numbers match what the original viewer shows.</li>
+          <li>Left-click sets cursor 1 and right-click sets cursor 2, as in the original viewer. Drag with either button to adjust, or press 1 or 2 and use the arrow keys. On a touch screen, use Add cursor 2 and then tap. The reading is exact in samples; it is in seconds only as far as the seconds-per-sample box is right.</li>
+          <li>The time between samples is not stored in a form this viewer can read yet. It assumes the value above (default 1 s). Change it and the time axis follows.</li>
+          <li>Status channels show the state number the original program plots. Click a state in the Values tab to name it; names are remembered in this browser only. A few names confirmed on a real recording are built in.</li>
+          <li>Channels the recording marks as raw status words show their raw number.</li>
+          <li>Temperatures, speeds and pressures are stored in metric (°C, km/h, hPa) even when labeled °F, MPH or psi. The checkbox converts them to the labeled unit; turn it off to see the stored values. This is inferred from the data, so check a channel or two against the original viewer.</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+</div>
+
+<script>
+/* ---------- parser (pure functions; tested in Node against real files) ---------- */
+// PARSER-START
+const STEPS = new Set([2, 202, 402, 602, 802, 1002]);
+function decFor(sc) { for (let k = 0; k <= 4; k++) { const v = sc * Math.pow(10, k); if (Math.abs(v - Math.round(v)) < 1e-6) return k; } return 4; }
+function parseGSR(buf) {
+  const d = new Uint8Array(buf), dv = new DataView(buf);
+  if (d.length < 0x1000) throw new Error('File is too small to be a GSR recording');
+  const str = (a, b) => { let s = ''; for (let i = a; i < b && i < d.length && d[i]; i++) s += String.fromCharCode(d[i]); return s; };
+  const printable = (a, b) => { for (let i = a; i < b; i++) if (d[i] < 32 || d[i] > 126) return false; return true; };
+  const hdr = { vin: str(0, 17), model: str(0x3c, 0x6e), year: str(0x6e, 0x78), engine: str(0x78, 0xa0), ecu: str(0xb0, 0xc0), sw: str(0xcc, 0xe0), comment: '' };
+  { let s = 0x400; while (s < 0x440 && (d[s] < 33 || d[s] > 126)) s++; let e = s; while (e < 0x460 && d[e] >= 32 && d[e] <= 126) e++; hdr.comment = e - s >= 4 ? str(s, e).trim() : ''; }
+  // first channel record: a printable name that repeats every 552 bytes, with a small index just before it
+  const nameOk = p => { let e = p; while (e < p + 256 && e < d.length && d[e]) e++; if (e - p < 3) return false; for (let i = p; i < e; i++) if (d[i] < 32 || d[i] > 126) return false; return true; };
+  let first = -1;
+  for (let p = 0x1004; p < Math.min(d.length - 1200, 0x8000); p++) {
+    const ix = dv.getUint32(p - 4, true);
+    if (ix >= 1 && ix <= 999 && nameOk(p) && nameOk(p + 552) && nameOk(p + 1104)) { first = p - 4; break; }
+  }
+  if (first < 0) throw new Error('No channel table found. This does not look like a GSR recording');
+  const chans = [];
+  let o = first;
+  while (o + 552 < d.length) {
+    const idx = dv.getUint32(o, true);
+    let e = o + 4; while (e < o + 260 && d[e]) e++;
+    const len = e - (o + 4);
+    if (!(idx >= 1 && idx <= 999 && len >= 3 && printable(o + 4, e))) break;
+    const mn = dv.getUint32(o + 4 + 408, true), mx = dv.getUint32(o + 4 + 412, true);
+    const kind = d[o + 4 + 449];
+    let scale = dv.getFloat64(o + 4 + 453, true), offset = dv.getFloat64(o + 4 + 461, true);
+    if (!isFinite(offset) || Math.abs(offset) > 1e9) offset = 0;
+    if (!isFinite(scale)) scale = 1;
+    let unit = '';
+    { const q = o + 4 + 418, wide = d[q + 1] === 0 && d[q + 2] !== 0, step = wide ? 2 : 1;
+      for (let i = q; i < q + 16 && d[i] >= 32 && d[i] < 127 && (!wide || d[i + 1] === 0); i += step) unit += String.fromCharCode(d[i]);
+      if (unit[0] === "'") unit = '°' + unit.slice(1); }
+    const name = str(o + 4, e);
+    if (!unit && /temperature/i.test(name)) unit = '°C';
+    const bits = mn === 0x80 ? 8 : mn === 0x8000 ? 16 : mn === 0x80000000 ? 32 : (mx <= 0xff ? 8 : mx <= 0xffff ? 16 : 32);
+    chans.push({ idx, name, unit, scale, offset, kind, signed: kind === 2, bits, ucode: d[o + 4 + 416] });
+    o += 552;
+  }
+  let start = -1;
+  for (let i = o; i < d.length; i++) if (d[i]) { start = i; break; }
+  if (start < 0) throw new Error('The recording has a channel table but no samples');
+  const byIdx = new Map(chans.map(c => [c.idx, c]));
+  const pos = new Map(), raw = new Map();
+  for (const c of chans) { pos.set(c.idx, []); raw.set(c.idx, []); }
+  for (let p = start; p + 8 <= d.length; p += 8) {
+    const i = dv.getUint16(p, true);
+    if (byIdx.has(i)) { pos.get(i).push(dv.getUint16(p + 2, true)); raw.get(i).push(dv.getUint32(p + 4, true)); }
+  }
+  // stray trailing records: keep the most common sample count
+  const counts = new Map();
+  for (const c of chans) { const n = raw.get(c.idx).length; counts.set(n, (counts.get(n) || 0) + 1); }
+  let n = 0, best = -1; for (const [k, v] of counts) if (v > best) { best = v; n = k; }
+  const out = [];
+  for (const c of chans) {
+    const r = raw.get(c.idx).slice(0, n), p = pos.get(c.idx).slice(0, n);
+    let vals, mode = 'num';
+    if (c.kind === 3) {
+      const stepped = p.length > 0 && p.every(v => STEPS.has(v));
+      mode = stepped ? 'state' : 'raw';
+      vals = stepped ? p.map(v => (802 - v) / 200) : r.slice();
+    } else {
+      vals = r.map(x => {
+        if (c.signed) { const m = Math.pow(2, c.bits); x = x % m; if (x >= m / 2) x -= m; }
+        return x * c.scale + c.offset;
+      });
+    }
+    const dec = decFor(c.scale);
+    out.push(withUnits({ name: c.name, unit: c.unit, kind: c.kind, mode, vals, dec, scale: c.scale }, c.ucode));
+  }
+  hdr.samples = n; hdr.channels = out.length;
+  return { hdr, chans: out };
+}
+// Minimal zip reader so .GSRZ (zipped GSR) opens directly. Handles stored and deflate entries.
+async function unzipAll(buf) {
+  const d = new Uint8Array(buf), dv = new DataView(buf);
+  let e = -1;
+  for (let i = d.length - 22; i >= Math.max(0, d.length - 65600); i--) if (dv.getUint32(i, true) === 0x06054b50) { e = i; break; }
+  if (e < 0) throw new Error('Zip directory not found');
+  const cnt = dv.getUint16(e + 10, true); let p = dv.getUint32(e + 16, true); const out = [];
+  for (let k = 0; k < cnt; k++) {
+    if (dv.getUint32(p, true) !== 0x02014b50) break;
+    const method = dv.getUint16(p + 10, true), csize = dv.getUint32(p + 20, true), nlen = dv.getUint16(p + 28, true), xlen = dv.getUint16(p + 30, true), clen = dv.getUint16(p + 32, true), lho = dv.getUint32(p + 42, true);
+    let name = ''; for (let i = 0; i < nlen; i++) name += String.fromCharCode(d[p + 46 + i]);
+    p += 46 + nlen + xlen + clen;
+    if (name.endsWith('/')) continue;
+    const ds = lho + 30 + dv.getUint16(lho + 26, true) + dv.getUint16(lho + 28, true);
+    const raw = d.subarray(ds, ds + csize); let data;
+    if (method === 0) data = raw.slice().buffer;
+    else if (method === 8) data = await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+    else throw new Error('Unsupported zip compression in ' + name);
+    out.push({ name: name.split('/').pop(), buf: data });
+  }
+  return out;
+}
+
+// MSR = multi-module recording. Same sample records as GSR; channel records carry a module code before the name.
+function parseMSR(buf) {
+  const d = new Uint8Array(buf), dv = new DataView(buf);
+  if (d.length < 0x2000) return null;
+  const alnum = (a, b) => { for (let i = a; i < b; i++) { const c = d[i]; if (!((c >= 48 && c <= 57) || (c >= 65 && c <= 90))) return false; } return true; };
+  const nameEnd = p => { let e = p; while (e < p + 256 && e < d.length && d[e]) e++; if (e - p < 3) return -1; for (let i = p; i < e; i++) if (d[i] < 32 || d[i] > 126) return -1; return e; };
+  const shape = p => p >= 16 && p + 520 <= d.length && alnum(p - 16, p - 10) && nameEnd(p) > 0;
+  let seed = -1;
+  for (let p = 0x1000; p < Math.min(d.length - 1200, 0x20000); p++) if (shape(p) && shape(p + 552)) { seed = p; break; }
+  if (seed < 0) return null;
+  let first = seed; while (first - 552 >= 16 && nameEnd(first - 552) > 0) first -= 552;
+  const recs = []; for (let p = first; p + 520 <= d.length && nameEnd(p) > 0; p += 552) recs.push(p);
+  const s8 = (a, b) => { let t = ''; for (let i = a; i < b && d[i]; i++) t += String.fromCharCode(d[i]); return t; };
+  const chans = []; let firstEcu = '';
+  for (const p of recs) {
+    const ecu = alnum(p - 16, p - 10) ? s8(p - 16, p - 10) : '';
+    if (ecu && !firstEcu) firstEcu = ecu;
+    let sc = dv.getFloat64(p + 452, true), off = dv.getFloat64(p + 460, true);
+    if (!isFinite(sc)) sc = 1; if (!isFinite(off) || Math.abs(off) > 1e9) off = 0;
+    let unit = ''; for (let i = p + 417; i < p + 425 && d[i] >= 32 && d[i] < 127; i++) unit += String.fromCharCode(d[i]);
+    if (unit === '-') unit = '';
+    chans.push({ id: dv.getUint16(p - 5, true), name: s8(p, p + 256), ecu, kind: d[p + 448], signed: d[p + 448] === 2, bits: ({ 1: 8, 2: 16, 3: 32 })[d[p + 447]] || 32, scale: sc, offset: off, unit, ucode: d[p + 415] });
+  }
+  chans.forEach(c => { if (!c.ecu) c.ecu = firstEcu; });
+  const ecus = [...new Set(chans.map(c => c.ecu))];
+  // module list text follows the table after a run of zeros
+  let t = recs[recs.length - 1] + 552; while (t < d.length && !d[t]) t++;
+  let mods = [];
+  { let e = t; while (e < d.length && d[e] >= 32 && d[e] < 127) e++; mods = s8(t, e).split(';').map(x => x.trim()).filter(Boolean); }
+  if (mods.length !== ecus.length) mods = ecus;
+  chans.forEach(c => { c.mod = mods[ecus.indexOf(c.ecu)]; });
+  const ids = new Set(chans.map(c => c.id)), idAt = q => q + 2 <= d.length ? dv.getUint16(q, true) : -1;
+  let start = -1;
+  for (let q = t; q + 24 <= d.length; q += 8) if (ids.has(idAt(q)) && ids.has(idAt(q + 8)) && ids.has(idAt(q + 16))) { start = q; break; }
+  if (start < 0) throw new Error('The recording has a channel table but no samples');
+  const pos = new Map(), raw = new Map(); for (const c of chans) { pos.set(c, []); raw.set(c, []); }
+  // channel ids repeat across modules, so samples are assigned by position in the repeating frame (table order)
+  const N = chans.length; let j = 0;
+  for (let p = start; p + 8 <= d.length; p += 8) {
+    const i = dv.getUint16(p, true); if (!ids.has(i)) continue;
+    let k = -1; for (let t = 0; t < N; t++) { const q = (j + t) % N; if (chans[q].id === i) { k = q; break; } }
+    if (k < 0) continue;
+    const c = chans[k]; pos.get(c).push(dv.getUint16(p + 2, true)); raw.get(c).push(dv.getUint32(p + 4, true)); j = (k + 1) % N;
+  }
+  const counts = new Map(); for (const c of chans) { const n = raw.get(c).length; counts.set(n, (counts.get(n) || 0) + 1); }
+  let n = 0, best = -1; for (const [k, v] of counts) if (v > best) { best = v; n = k; }
+  const dupes = new Map(); chans.forEach(c => dupes.set(c.name, (dupes.get(c.name) || 0) + 1));
+  const out = chans.map(c => {
+    const r = raw.get(c).slice(0, n), pp = pos.get(c).slice(0, n); let vals, mode = 'num';
+    if (c.kind === 3) { const stepped = pp.length > 0 && pp.every(v => STEPS.has(v)); mode = stepped ? 'state' : 'raw'; vals = stepped ? pp.map(v => (802 - v) / 200) : r.slice(); }
+    else vals = r.map(x => { if (c.signed) { const m = Math.pow(2, c.bits); x = x % m; if (x >= m / 2) x -= m; } return x * c.scale + c.offset; });
+    return withUnits({ name: dupes.get(c.name) > 1 ? c.name + ' (' + c.mod + ')' : c.name, unit: c.unit, kind: c.kind, mode, vals, dec: decFor(c.scale), scale: c.scale, mod: c.mod }, c.ucode);
+  });
+  const hdr = readHdr(d); hdr.samples = n; hdr.channels = out.length; hdr.modules = mods;
+  return { hdr, chans: out };
+}
+// The last bytes of a recording hold 7-byte clock stamps: year-2000, month, day, weekday, hour, minute, second.
+// The first stamp is the record start and the next one is the end (local time, 1 s resolution).
+function readStamp(buf) {
+  const d = new Uint8Array(buf), from = Math.max(0, d.length - 4096), hits = [];
+  for (let i = from; i + 7 <= d.length; i++) {
+    if (d[i] >= 20 && d[i] <= 99 && d[i + 1] >= 1 && d[i + 1] <= 12 && d[i + 2] >= 1 && d[i + 2] <= 31 && d[i + 3] >= 1 && d[i + 3] <= 7 && d[i + 4] < 24 && d[i + 5] < 60 && d[i + 6] < 60) {
+      hits.push(i); i += 6;
+      if (hits.length === 2) break;
+    }
+  }
+  if (hits.length < 2) return null;
+  const secs = i => d[i + 4] * 3600 + d[i + 5] * 60 + d[i + 6];
+  let start = secs(hits[0]), end = secs(hits[1]); if (end < start) end += 86400;
+  return { start, end, date: (2000 + d[hits[0]]) + '-' + String(d[hits[0] + 1]).padStart(2, '0') + '-' + String(d[hits[0] + 2]).padStart(2, '0') };
+}
+function parseRecording(buf) { const p = parseMSR(buf) || parseGSR(buf); try { p.hdr.stamp = readStamp(buf); } catch (e) { p.hdr.stamp = null; } return p; }
+function readHdr(d) {
+  const str = (a, b) => { let s = ''; for (let i = a; i < b && i < d.length && d[i]; i++) s += String.fromCharCode(d[i]); return s; };
+  const h = { vin: str(0, 17), model: str(0x3c, 0x6e), year: str(0x6e, 0x78), engine: str(0x78, 0xa0), ecu: str(0xb0, 0xc0), sw: str(0xcc, 0xe0), comment: '' };
+  let s = 0x400; while (s < 0x440 && (d[s] < 33 || d[s] > 126)) s++; let e = s; while (e < 0x460 && d[e] >= 32 && d[e] <= 126) e++; h.comment = e - s >= 4 ? str(s, e).trim() : '';
+  return h;
+}
+// Values are stored in metric. Channels whose unit label is a US unit (°F, MPH, psi, mile) can be shown converted, as the original viewer does.
+const UCONV = { 3: { m: 1.8, a: 32, src: '°C' }, 6: { m: 0.621371, a: 0, src: 'km/h' }, 28: { m: 0.0145038, a: 0, src: 'hPa' }, 34: { m: 0.621371, a: 0, src: 'km' } };
+function withUnits(ch, ucode) {
+  if (ch.mode === 'num' && UCONV[ucode]) { ch.cv = UCONV[ucode]; ch.base = ch.vals; ch.dispUnit = ch.unit; ch.decBase = ch.dec; }
+  return ch;
+}
+function applyUnits(file, on) {
+  for (const c of file.chans) if (c.cv) {
+    c.vals = on ? c.base.map(x => x * c.cv.m + c.cv.a) : c.base;
+    c.unit = on ? c.dispUnit : c.cv.src; c.dec = on ? Math.max(c.decBase, 1) : c.decBase;
+  }
+}
+// PARSER-END
+
+/* ---------- state labels confirmed against a real recording in the original viewer ---------- */
+const SEEN = {
+  'HCU Engine Start Signal|0': 'NO', 'HCU Engine Start Signal|1': 'YES',
+  '12V Relay ON State|1': 'ON', '12V Relay ON Command|0': 'NO', '12V Relay OFF Command|0': 'Normal',
+  '12V Current Sensor Fault Detection Request|0': 'NO', '12V Current Sensor Fault Detection Request(LDC)|0': 'NO',
+  'LDC On Request|0': 'Normal', '12V Relay ON Alram Request|0': 'Normal', '12V Relay OFF Alram Request|0': 'Normal',
+  '12V Relay Open Detection Request|0': 'Normal', '12V Vehicle Speed Limit Request|0': 'Normal',
+  'VCU/HCU Ready|1': 'Drivable', 'GCU Ready|1': 'Mg2 MCU is Alive', 'GCU Main Relay Off Request|0': 'NO'
+};
+let userLabels = {};
+try { userLabels = JSON.parse(localStorage.getItem('gsr.labels') || '{}') || {}; } catch (e) { userLabels = {}; }
+function saveLabels() { try { localStorage.setItem('gsr.labels', JSON.stringify(userLabels)); } catch (e) { /* storage unavailable */ } }
+function labelFor(name, v) {
+  const k = name + '|' + v;
+  return Object.prototype.hasOwnProperty.call(userLabels, k) ? userLabels[k] : (SEEN[k] || null);
+}
+
+/* ---------- state ---------- */
+const $ = id => document.getElementById(id);
+const S = { pinned: new Set(), live: null, tdiv: 0, c2: null, active: 1, units: true, files: [], selected: new Set(), cursor: 0, ival: 1, startSec: null, boff: 0, tab: 'graph', filter: '', onlyChanging: false };
+const COLORS = ['--s1', '--s2'];
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+function status(msg, err) { const el = $('status'); el.textContent = msg || ''; el.className = 'status' + (err ? ' err' : ''); }
+
+/* ---------- derived data ---------- */
+function unionChannels() {
+  const seen = new Map();
+  S.files.forEach((f, fi) => f.chans.forEach(c => {
+    if (!seen.has(c.name)) seen.set(c.name, { name: c.name, unit: c.unit, mode: c.mode, dec: c.dec, kind: c.kind, src: [null, null], mod: c.mod || '' });
+    seen.get(c.name).src[fi] = c;
+  }));
+  return [...seen.values()];
+}
+let UNION = [];
+function stats(vals) {
+  let lo = Infinity, hi = -Infinity, sum = 0;
+  for (const v of vals) { if (v < lo) lo = v; if (v > hi) hi = v; sum += v; }
+  return { lo, hi, avg: vals.length ? sum / vals.length : 0 };
+}
+function changes(ch) { return ch.src.some(c => c && c.vals.length && stats(c.vals).hi !== stats(c.vals).lo); }
+function totalN() { return Math.max(1, ...S.files.map((f, i) => f.hdr.samples + (i === 1 ? Math.max(0, S.boff) : 0))); }
+function sampleOf(fi, k) { return fi === 1 ? k - S.boff : k; }
+function valAt(c, fi, k) { if (!c) return null; const j = sampleOf(fi, k); return j >= 0 && j < c.vals.length ? c.vals[j] : null; }
+function fmt(ch, v) {
+  if (v == null) return '–';
+  if (ch.mode === 'state') { const l = labelFor(ch.name, v); return l ? l : 'state ' + v; }
+  if (ch.mode === 'raw') return String(v);
+  return v.toFixed(ch.dec);
+}
+function clockAt(k) {
+  if (S.startSec == null) return '';
+  let t = Math.round(S.startSec + k * S.ival); t = ((t % 86400) + 86400) % 86400;
+  const h = Math.floor(t / 3600), m = Math.floor(t % 3600 / 60), s = t % 60;
+  return [h, m, s].map(x => String(x).padStart(2, '0')).join(':');
+}
+
+/* ---------- file loading ---------- */
+async function loadFiles(list) {
+  const arr = [...list];
+  for (const f of arr) {
+    if (S.files.length >= 2) { status('Two recordings are open. Remove one to add another.', true); break; }
+    try {
+      const buf = await f.arrayBuffer();
+      const b = new Uint8Array(buf, 0, 2);
+      const items = (b[0] === 0x50 && b[1] === 0x4b) ? await unzipAll(buf) : [{ name: f.name, buf }];
+      if (!items.length) throw new Error('The zip file is empty');
+      for (const it of items) {
+        if (S.files.length >= 2) { status('Two recordings are open. Remove one to add another.', true); break; }
+        try {
+          const p = parseRecording(it.buf); p.name = it.name; applyUnits(p, S.units); S.files.push(p); status('');
+          const st = p.hdr.stamp;
+          if (S.files.length === 1 && st && p.hdr.samples > 1 && st.end > st.start) {
+            S.startSec = st.start; S.ival = Math.round((st.end - st.start) / (p.hdr.samples - 1) * 1000) / 1000;
+            const hh = n => String(n).padStart(2, '0'), t = st.start % 86400;
+            $('tstart').value = hh(Math.floor(t / 3600)) + ':' + hh(Math.floor(t / 60) % 60) + ':' + hh(t % 60); $('ival').value = S.ival;
+            $('tstart').title = $('ival').title = 'Read from the start and end clock stamps stored in the file (1 s resolution), so the interval is approximate. You can edit it.';
+          }
+        }
+        catch (e) { status(it.name + ': ' + e.message, true); }
+      }
+    } catch (e) { status(f.name + ': ' + e.message, true); }
+  }
+  afterFilesChanged(true);
+}
+function demo() {
+  const n = 60, mk = (name, unit, fn, dec, mode) => ({ name, unit, kind: mode === 'state' ? 3 : 1, mode: mode || 'num', dec: dec == null ? 1 : dec, scale: 0.1, vals: Array.from({ length: n }, (_, i) => fn(i)) });
+  const chans = [
+    mk('Pack Current', 'A', i => i < 34 ? 19 + Math.sin(i / 3) : -19.5 + Math.sin(i / 4) * 0.6),
+    mk('Pack Voltage', 'V', i => 262.8 + i * 0.12 + Math.sin(i / 2) * 0.2),
+    mk('Charger Output', 'V', i => i < 34 ? 13.8 : 13.1 - (i - 34) * 0.005, 2),
+    mk('Aux Battery Voltage', 'V', i => i < 34 ? 13.5 : 13.2, 1),
+    mk('Charger Diagnostic State', '', i => (i >= 22 && i < 35) ? 15 : 0, 0, 'raw'),
+    mk('Engine Start Request', '', i => i < 8 ? 0 : 1, 0, 'state')
+  ];
+  S.files = [{ name: 'example-recording.GSR', hdr: { vin: 'EXAMPLE-DATA', model: 'Synthetic example, not a real vehicle', year: '', engine: '', ecu: '', sw: '', comment: 'Generated numbers for trying out the viewer', samples: n, channels: chans.length }, chans }];
+  status('');
+  afterFilesChanged(true);
+}
+function afterFilesChanged(autoselect) {
+  UNION = unionChannels();
+  if (S.files.length === 0) {
+    $('work').hidden = true; $('drop').hidden = false; $('files').innerHTML = ''; return;
+  }
+  $('drop').hidden = true; $('work').hidden = false;
+  $('offWrap').hidden = S.files.length < 2;
+  $('unitWrap').hidden = !S.files.some(f => f.chans.some(c => c.cv));
+  if (autoselect) autoSelect(); else S.selected = new Set([...S.selected].filter(n => UNION.some(u => u.name === n)));
+  S.cursor = Math.min(S.cursor, totalN() - 1); if (S.c2 != null) S.c2 = Math.min(S.c2, totalN() - 1);
+  renderChips(); renderMeta(); renderList(); renderAll();
+}
+function autoSelect() {
+  S.selected = new Set();
+  const pool = UNION.filter(u => changes(u) && u.mode === 'num');
+  pool.slice(0, 6).forEach(u => S.selected.add(u.name));
+  if (S.selected.size === 0) UNION.slice(0, 4).forEach(u => S.selected.add(u.name));
+}
+
+/* ---------- rendering: chips, meta, list ---------- */
+function renderChips() {
+  const el = $('files'); el.innerHTML = '';
+  S.files.forEach((f, i) => {
+    const c = document.createElement('div'); c.className = 'chip';
+    const dot = document.createElement('span'); dot.className = 'dot'; dot.style.background = `var(${COLORS[i]})`;
+    const nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = (S.files.length > 1 ? (i ? 'B  ' : 'A  ') : '') + f.name; nm.title = f.name;
+    const x = document.createElement('button'); x.type = 'button'; x.textContent = '×'; x.setAttribute('aria-label', 'Remove ' + f.name);
+    x.onclick = () => { S.files.splice(i, 1); afterFilesChanged(true); };
+    c.append(dot, nm, x);
+    el.append(c);
+  });
+  if (S.files.length === 2) {
+    const sw = document.createElement('button'); sw.type = 'button'; sw.className = 'btn small'; sw.textContent = 'Swap A and B';
+    sw.onclick = () => { S.files.reverse(); afterFilesChanged(false); };
+    el.append(sw);
+  }
+}
+function renderMeta() {
+  const f = S.files[0], el = $('meta'); el.innerHTML = '';
+  const add = (k, v, wide) => { if (!v) return; const d = document.createElement('div'); if (wide) d.className = 'wide'; const a = document.createElement('div'); a.className = 'k'; a.textContent = k; const b = document.createElement('div'); b.className = 'v'; b.textContent = v; d.append(a, b); el.append(d); };
+  const h = f.hdr;
+  add(S.files.length > 1 ? 'Vehicle (A)' : 'Vehicle', [h.year, h.model].filter(Boolean).join(' '));
+  add('VIN', h.vin); add('Engine', h.engine);
+  if (h.modules) add('Modules', h.modules.join(', '));
+  add('Channels × samples', h.channels + ' × ' + h.samples);
+  if (S.files[1]) add('Recording B', [S.files[1].hdr.year, S.files[1].hdr.model].filter(Boolean).join(' ') + ' · ' + S.files[1].hdr.vin + ' · ' + S.files[1].hdr.channels + ' × ' + S.files[1].hdr.samples, true);
+  add('Note stored in the file', h.comment, true);
+}
+function visibleChannels() {
+  const q = S.filter.trim().toLowerCase();
+  return UNION.filter(u => (!q || u.name.toLowerCase().includes(q)) && (!S.onlyChanging || changes(u)));
+}
+function renderList() {
+  const el = $('list'); el.innerHTML = '';
+  const frag = document.createDocumentFragment();
+  for (const u of visibleChannels()) {
+    const row = document.createElement('label'); row.className = 'item';
+    const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = S.selected.has(u.name);
+    cb.onchange = () => { if (cb.checked) S.selected.add(u.name); else S.selected.delete(u.name); updateCount(); renderLanes(); renderTable(); };
+    const t = document.createElement('span'); t.className = 't'; t.textContent = u.name; t.title = u.name;
+    row.append(cb, t);
+    if (u.mod) { const m = document.createElement('span'); m.className = 'badge'; m.textContent = u.mod; row.append(m); }
+    if (u.mode !== 'num') { const b = document.createElement('span'); b.className = 'badge'; b.textContent = u.mode === 'state' ? 'state' : 'raw'; row.append(b); }
+    frag.append(row);
+  }
+  el.append(frag); updateCount();
+}
+function updateCount() { $('selCount').textContent = S.selected.size + ' selected · ' + visibleChannels().length + ' shown of ' + UNION.length; }
+
+/* ---------- lanes ---------- */
+let LANES = [];
+const PAD = { l: 10, r: 12, t: 10, b: 10 };
+function renderLanes() {
+  const host = $('lanes'), pinHost = $('pinned'), sc0 = $('scroller'), sx = sc0.scrollLeft, sy = sc0.scrollTop;
+  host.innerHTML = ''; pinHost.innerHTML = ''; LANES = [];
+  const chosen = UNION.filter(u => S.selected.has(u.name));
+  if (!chosen.length) { const e = document.createElement('div'); e.className = 'empty-lanes'; e.textContent = 'Pick channels on the left to graph them. There is no limit on how many.'; host.append(e); drawRuler(); return; }
+  for (const ch of chosen) {
+    const lane = document.createElement('div'); lane.className = 'lane';
+    const lh = document.createElement('div'); lh.className = 'lh';
+    const ln = document.createElement('span'); ln.className = 'ln'; ln.textContent = ch.name; ln.title = ch.name;
+    const lu = document.createElement('span'); lu.className = 'lu'; lu.textContent = [ch.unit, ch.mod].filter(Boolean).join(' · ');
+    const sp = document.createElement('span'); sp.className = 'sp';
+    const vals = document.createElement('span'); vals.className = 'vals';
+    const refs = [];
+    S.files.forEach((f, fi) => {
+      if (!ch.src[fi]) return;
+      const b = document.createElement('b'); const dot = document.createElement('i'); dot.style.background = `var(${COLORS[fi]})`;
+      const tx = document.createElement('span'); b.append(...(S.files.length > 1 ? [dot, tx] : [tx])); vals.append(b); refs[fi] = tx;
+    });
+    const x = document.createElement('button'); x.className = 'x'; x.type = 'button'; x.textContent = '×'; x.setAttribute('aria-label', 'Remove ' + ch.name + ' from graph');
+    x.onclick = () => { S.selected.delete(ch.name); renderLanes(); renderList(); renderTable(); };
+    const pin = document.createElement('label'); pin.className = 'pin'; pin.title = 'Lock this graph at the top while the others scroll';
+    const pc = document.createElement('input'); pc.type = 'checkbox'; pc.checked = S.pinned.has(ch.name); pc.setAttribute('aria-label', 'Lock ' + ch.name + ' in place');
+    pc.onchange = () => { if (pc.checked) S.pinned.add(ch.name); else S.pinned.delete(ch.name); renderLanes(); };
+    pin.append(pc, document.createTextNode('Lock'));
+    lh.append(pin, ln, lu, sp, vals, x);
+    const st = document.createElement('div'); st.className = 'lstat';
+    const parts = [];
+    S.files.forEach((f, fi) => { const c = ch.src[fi]; if (!c || !c.vals.length) return; const s = stats(c.vals); parts.push((S.files.length > 1 ? (fi ? 'B ' : 'A ') : '') + 'min ' + fmt(ch, s.lo) + ' · max ' + fmt(ch, s.hi) + (ch.mode === 'num' ? ' · avg ' + s.avg.toFixed(ch.dec) : '')); });
+    st.textContent = parts.join('   |   ');
+    const cv = document.createElement('canvas');
+    lane.append(lh, st, cv); (S.pinned.has(ch.name) ? pinHost : host).append(lane);
+    LANES.push({ ch, cv, refs });
+  }
+  requestAnimationFrame(() => { drawAll(); sc0.scrollLeft = sx; sc0.scrollTop = sy; });
+}
+function setupCanvas(cv) {
+  const dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
+  if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+  const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+  return { g, w, h };
+}
+function xOf(k, w, n) { return PAD.l + (n <= 1 ? 0.5 : k / (n - 1)) * (w - PAD.l - PAD.r); }
+function drawRuler() {
+  const cv = $('ruler'); const { g, w, h } = setupCanvas(cv);
+  const n = totalN(); const ink = css('--muted'), axis = css('--axis'), ink2 = css('--ink2');
+  g.font = '11px system-ui, sans-serif'; g.fillStyle = ink; g.strokeStyle = axis; g.lineWidth = 1; g.textBaseline = 'top';
+  const px = (w - PAD.l - PAD.r) / Math.max(1, n - 1);
+  const stepSamples = [1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000].find(s => s * px >= 64) || 1000;
+  for (let k = 0; k < n; k += stepSamples) {
+    const x = Math.round(xOf(k, w, n)) + 0.5;
+    g.beginPath(); g.moveTo(x, h - 7); g.lineTo(x, h - 1); g.stroke();
+    const sec = k * S.ival; const label = (Math.abs(sec - Math.round(sec)) < 1e-6 ? Math.round(sec) : sec.toFixed(1)) + ' s';
+    g.textAlign = k === 0 ? 'left' : 'center'; g.fillText(label, k === 0 ? x - 4 : x, 4);
+  }
+  g.beginPath(); g.moveTo(0, h - 0.5); g.lineTo(w, h - 0.5); g.stroke();
+  const cx = xOf(S.cursor, w, n); g.strokeStyle = ink2; g.setLineDash([]); g.beginPath(); g.moveTo(cx + 0.5, 0); g.lineTo(cx + 0.5, h); g.stroke();
+  if (S.c2 != null) {
+    const x2 = xOf(S.c2, w, n); g.setLineDash([4, 3]); g.beginPath(); g.moveTo(x2 + 0.5, 0); g.lineTo(x2 + 0.5, h); g.stroke(); g.setLineDash([]);
+    g.fillStyle = ink2; g.textBaseline = 'top'; g.font = '700 11px system-ui, sans-serif';
+    g.textAlign = 'left'; g.fillText('1', cx + 4, 15); g.fillText('2', x2 + 4, 15);
+  }
+}
+function drawLane(L) {
+  const { g, w, h } = setupCanvas(L.cv); const ch = L.ch; const n = totalN();
+  const grid = css('--grid'), muted = css('--muted'), ink2 = css('--ink2'), surface = css('--surface');
+  // scale from every visible series
+  let lo = Infinity, hi = -Infinity; const levels = new Set();
+  S.files.forEach((f, fi) => { const c = ch.src[fi]; if (!c) return; for (const v of c.vals) { if (v < lo) lo = v; if (v > hi) hi = v; if (ch.mode !== 'num') levels.add(v); } });
+  if (!isFinite(lo)) return;
+  const discrete = ch.mode !== 'num' && levels.size <= 12;
+  const lv = [...levels].sort((a, b) => a - b);
+  if (hi === lo) { const pad = Math.abs(hi) * 0.05 || 1; lo -= pad; hi += pad; } else { const pad = (hi - lo) * 0.1; lo -= pad; hi += pad; }
+  const yOf = v => PAD.t + (1 - (v - lo) / (hi - lo)) * (h - PAD.t - PAD.b);
+  const yD = v => { if (lv.length === 1) return h / 2; const i = lv.indexOf(v); return PAD.t + 8 + (1 - i / (lv.length - 1)) * (h - PAD.t - PAD.b - 16); };
+  const Y = discrete ? yD : yOf;
+  g.font = '10.5px system-ui, sans-serif'; g.lineWidth = 1; g.strokeStyle = grid; g.fillStyle = muted;
+  if (discrete) {
+    g.textAlign = 'right'; g.textBaseline = 'bottom';
+    for (const v of lv) { const y = Math.round(Y(v)) + 0.5; g.beginPath(); g.moveTo(PAD.l, y); g.lineTo(w - PAD.r, y); g.stroke(); g.fillText(fmt(ch, v), w - PAD.r - 2, y - 2); }
+  } else {
+    const ticks = [lo + (hi - lo) * 0.1, (lo + hi) / 2, hi - (hi - lo) * 0.1];
+    g.textAlign = 'left'; g.textBaseline = 'bottom';
+    for (let i = 0; i < 3; i++) { const v = ticks[i]; const y = Math.round(yOf(v)) + 0.5; g.beginPath(); g.moveTo(PAD.l, y); g.lineTo(w - PAD.r, y); g.stroke(); g.fillText(v.toFixed(ch.dec), PAD.l + 2, y - 2); }
+  }
+  // series
+  S.files.forEach((f, fi) => {
+    const c = ch.src[fi]; if (!c) return;
+    const col = css(COLORS[fi]); g.strokeStyle = col; g.lineWidth = 2; g.lineJoin = 'round'; g.beginPath();
+    let started = false, prevY = 0;
+    for (let j = 0; j < c.vals.length; j++) {
+      const k = j + (fi === 1 ? S.boff : 0); const x = xOf(k, w, n), y = Y(c.vals[j]);
+      if (!started) { g.moveTo(x, y); started = true; }
+      else if (ch.mode !== 'num') { g.lineTo(x, prevY); g.lineTo(x, y); }
+      else g.lineTo(x, y);
+      prevY = y;
+    }
+    g.stroke();
+    // cursor marker with a surface ring
+    const v = valAt(c, fi, S.cursor);
+    if (v != null) { const x = xOf(S.cursor, w, n), y = Y(v); g.fillStyle = col; g.strokeStyle = surface; g.lineWidth = 2; g.beginPath(); g.arc(x, y, 4, 0, Math.PI * 2); g.fill(); g.stroke(); }
+    if (S.c2 != null) { const v2 = valAt(c, fi, S.c2); if (v2 != null) { const x = xOf(S.c2, w, n), y = Y(v2); g.fillStyle = surface; g.strokeStyle = col; g.lineWidth = 2; g.beginPath(); g.arc(x, y, 4, 0, Math.PI * 2); g.fill(); g.stroke(); } }
+  });
+  const cx = Math.round(xOf(S.cursor, w, n)) + 0.5; g.strokeStyle = ink2; g.lineWidth = 1; g.setLineDash([]); g.beginPath(); g.moveTo(cx, 0); g.lineTo(cx, h); g.stroke();
+  if (S.c2 != null) {
+    const x2 = Math.round(xOf(S.c2, w, n)) + 0.5;
+    g.globalAlpha = 0.07; g.fillStyle = ink2; g.fillRect(Math.min(cx, x2), 0, Math.abs(x2 - cx), h); g.globalAlpha = 1;
+    g.setLineDash([4, 3]); g.beginPath(); g.moveTo(x2, 0); g.lineTo(x2, h); g.stroke(); g.setLineDash([]);
+  }
+  S.files.forEach((f, fi) => {
+    if (!L.refs[fi]) return;
+    const a = valAt(ch.src[fi], fi, S.cursor); let t = fmt(ch, a);
+    if (S.c2 != null) { const b = valAt(ch.src[fi], fi, S.c2); t = '1: ' + t + '   2: ' + fmt(ch, b) + (ch.mode === 'num' && a != null && b != null ? '   ? ' + ((b - a) >= 0 ? '+' : '') + (b - a).toFixed(ch.dec) : ''); }
+    L.refs[fi].textContent = t;
+  });
+}
+const MAXW = 15000;
+function layoutWidth() {
+  const sc = $('scroller'), vw = sc.clientWidth; if (!vw) return;
+  const n = totalN(); let W = vw;
+  if (S.tdiv > 0) { const pps = (vw - PAD.l - PAD.r) / (10 * S.tdiv / S.ival); W = Math.min(MAXW, Math.max(vw, Math.round(PAD.l + PAD.r + (n - 1) * pps))); }
+  sc.style.setProperty('--vw', vw + 'px'); $('inner').style.width = W + 'px';
+}
+function ensureVisible(k) {
+  const sc = $('scroller'), n = totalN(), W = $('inner').clientWidth, vw = sc.clientWidth; if (W <= vw + 1) return;
+  const x = xOf(k, W, n); if (x < sc.scrollLeft + 40) sc.scrollLeft = Math.max(0, x - 80); else if (x > sc.scrollLeft + vw - 40) sc.scrollLeft = x - vw + 80;
+}
+function drawAll() { layoutWidth(); drawRuler(); LANES.forEach(drawLane); }
+function updateReadout() {
+  const n = totalN(); const t = S.cursor * S.ival; const ts = (Math.abs(t - Math.round(t)) < 1e-6 ? String(Math.round(t)) : t.toFixed(2));
+  const clock = clockAt(S.cursor);
+  $('readout').textContent = (S.c2 != null ? (S.active === 1 ? '? ' : '') + '1: ' : '') + (S.live === 1 ? '[click to set] ' : '') + 'Sample ' + S.cursor + ' of ' + (n - 1) + ' · ' + ts + ' s' + (clock ? ' · ' + clock : '');
+  if (S.c2 != null) {
+    const dk = S.c2 - S.cursor, dtm = Math.abs(dk) * S.ival, t2 = S.c2 * S.ival;
+    $('readout').textContent += '   ' + (S.active === 2 ? '? ' : '') + '2: ' + (S.live === 2 ? '[click to set] ' : '') + 'sample ' + S.c2 + ' · ' + (Math.abs(t2 - Math.round(t2)) < 1e-6 ? Math.round(t2) : t2.toFixed(2)) + ' s';
+    $('delta').textContent = 'Cursor 1 ? 2:  ?t ' + (Math.abs(dtm - Math.round(dtm)) < 1e-6 ? Math.round(dtm) : dtm.toFixed(2)) + ' s  (' + Math.abs(dk) + ' samples)';
+    $('delta').classList.remove('idle');
+  } else { $('delta').textContent = 'Cursor 1 ? 2:  add cursor 2 to measure'; $('delta').classList.add('idle'); }
+  $('btnC2').textContent = S.c2 != null ? 'Remove cursor 2' : 'Add cursor 2';
+}
+function setCursor(k) {
+  k = Math.max(0, Math.min(totalN() - 1, k));
+  if (S.active === 2 && S.c2 != null) { if (k === S.c2) return; S.c2 = k; } else { if (k === S.cursor) return; S.cursor = k; }
+  updateReadout();
+  if (S.tab === 'graph') { drawAll(); if (!dragging) ensureVisible(k); } else updateTableValues();
+}
+
+/* ---------- values table ---------- */
+let ROWS = [];
+function renderTable() {
+  const t = $('tbl'); t.innerHTML = ''; ROWS = [];
+  const two = S.files.length > 1;
+  const head = document.createElement('thead'); const hr = document.createElement('tr');
+  const cols = ['', 'Channel', two ? 'A' : 'Value', ...(two ? ['B', 'B ? A'] : []), 'Min', 'Max'];
+  cols.forEach((c, i) => { const th = document.createElement('th'); th.textContent = c; if (i >= 2) th.className = 'num'; if (i === 0) th.className = 'cb'; hr.append(th); });
+  head.append(hr); t.append(head);
+  const body = document.createElement('tbody');
+  for (const u of visibleChannels()) {
+    const tr = document.createElement('tr');
+    const c0 = document.createElement('td'); c0.className = 'cb'; const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = S.selected.has(u.name); cb.setAttribute('aria-label', 'Graph ' + u.name);
+    cb.onchange = () => { if (cb.checked) S.selected.add(u.name); else S.selected.delete(u.name); updateCount(); renderLanes(); renderList(); };
+    c0.append(cb);
+    const c1 = document.createElement('td'); c1.className = 'nm'; c1.textContent = u.name; if (u.unit) { const s = document.createElement('span'); s.className = 'u'; s.textContent = u.unit; c1.append(s); }
+    const a = document.createElement('td'); a.className = 'num';
+    const b = two ? document.createElement('td') : null; if (b) b.className = 'num';
+    const dl = two ? document.createElement('td') : null; if (dl) dl.className = 'num';
+    const mnC = document.createElement('td'); mnC.className = 'num'; const mxC = document.createElement('td'); mxC.className = 'num';
+    const first = u.src.find(Boolean); if (first && first.vals.length) { const s = stats(first.vals); mnC.textContent = fmt(u, s.lo); mxC.textContent = fmt(u, s.hi); }
+    if (u.mode === 'state') { [a, b].forEach((cell, fi) => { if (!cell) return; cell.classList.add('lab'); cell.title = 'Click to name this state'; cell.onclick = () => editLabel(u, fi, cell); }); }
+    tr.append(c0, c1, a, ...(two ? [b, dl] : []), mnC, mxC); body.append(tr);
+    ROWS.push({ u, a, b, dl });
+  }
+  t.append(body); updateTableValues();
+}
+function updateTableValues() {
+  if (S.tab !== 'values') return;
+  for (const r of ROWS) {
+    const va = valAt(r.u.src[0], 0, S.cursor), vb = S.files.length > 1 ? valAt(r.u.src[1], 1, S.cursor) : null;
+    if (!r.a.querySelector('input')) { r.a.textContent = fmt(r.u, va); }
+    if (r.b) { if (!r.b.querySelector('input')) r.b.textContent = fmt(r.u, vb); }
+    if (r.dl) r.dl.textContent = (r.u.mode === 'num' && va != null && vb != null) ? ((vb - va) >= 0 ? '+' : '') + (vb - va).toFixed(r.u.dec) : '';
+  }
+}
+function editLabel(u, fi, cell) {
+  const v = valAt(u.src[fi], fi, S.cursor); if (v == null || cell.querySelector('input')) return;
+  const inp = document.createElement('input'); inp.className = 'edit'; inp.type = 'text'; inp.id = 'lblEdit'; inp.value = labelFor(u.name, v) || '';
+  inp.placeholder = 'Name for state ' + v; inp.setAttribute('aria-label', 'Name for state ' + v + ' of ' + u.name);
+  cell.textContent = ''; cell.append(inp); inp.focus(); inp.select();
+  const done = save => {
+    if (save) { const k = u.name + '|' + v; const t = inp.value.trim(); if (t) userLabels[k] = t; else delete userLabels[k]; saveLabels(); }
+    renderTable(); if (S.tab === 'graph') drawAll();
+  };
+  inp.onkeydown = e => { if (e.key === 'Enter') done(true); else if (e.key === 'Escape') done(false); };
+  inp.onblur = () => done(true);
+}
+
+/* ---------- export ---------- */
+function csvCell(x) { const s = String(x); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
+function buildCSV(names) {
+  const chans = UNION.filter(u => names.has(u.name)); const n = totalN(); const two = S.files.length > 1;
+  const head = ['sample', 'seconds'];
+  if (S.startSec != null) head.push('clock');
+  chans.forEach(u => { const base = u.name + (u.unit ? ' [' + u.unit + ']' : '') + (u.mode === 'state' ? ' {state}' : ''); head.push(two ? 'A: ' + base : base); if (two) head.push('B: ' + base); });
+  const rows = [head.map(csvCell).join(',')];
+  for (let k = 0; k < n; k++) {
+    const r = [k, +(k * S.ival).toFixed(4)]; if (S.startSec != null) r.push(clockAt(k));
+    chans.forEach(u => { const a = valAt(u.src[0], 0, k); r.push(a == null ? '' : +a.toFixed(6)); if (two) { const b = valAt(u.src[1], 1, k); r.push(b == null ? '' : +b.toFixed(6)); } });
+    rows.push(r.map(csvCell).join(','));
+  }
+  return rows.join('\n');
+}
+async function exportCSV(all) {
+  const names = all ? new Set(UNION.map(u => u.name)) : S.selected;
+  if (!names.size) { status('Select at least one channel first.', true); return; }
+  const text = buildCSV(names); const base = (S.files[0].name || 'recording').replace(/\.[^.]+$/, '') + (all ? '_all' : '_selected') + '.csv';
+  let dl = null; try { dl = window.claude && window.claude.use ? await window.claude.use('downloads') : null; } catch (e) { dl = null; }
+  if (dl) {
+    try { await dl.save({ filename: base, data: text }); status('Saved ' + base); } catch (e) { status(e && e.code === 'declined' ? 'Save cancelled.' : 'Could not save the file here. Try Copy instead.', true); }
+  } else if (location.protocol === 'file:' || !window.claude) {
+    try {
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'text/csv' })); a.download = base;
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); status('Saved ' + base);
+    } catch (e) { status('Could not save the file.', true); }
+  } else {
+    try { await navigator.clipboard.writeText(text); status('Saving files is not available here, so the CSV was copied to your clipboard.'); } catch (e) { status('Saving files is not available in this view.', true); }
+  }
+}
+
+/* ---------- wiring ---------- */
+function setTab(t) {
+  S.tab = t; $('tabGraph').setAttribute('aria-selected', t === 'graph'); $('tabValues').setAttribute('aria-selected', t === 'values');
+  $('graphView').hidden = t !== 'graph'; $('valuesView').hidden = t !== 'values';
+  if (t === 'graph') requestAnimationFrame(drawAll); else renderTable();
+}
+function renderAll() { renderLanes(); renderTable(); updateReadout(); if (S.tab === 'values') updateTableValues(); }
+
+$('btnOpen').onclick = () => $('file').click();
+$('file').onchange = e => { loadFiles(e.target.files); e.target.value = ''; };
+$('btnDemo').onclick = demo;
+['dragenter', 'dragover'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); $('drop').classList.add('over'); }));
+['dragleave', 'drop'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); $('drop').classList.remove('over'); }));
+document.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files.length) loadFiles(e.dataTransfer.files); });
+$('q').oninput = e => { S.filter = e.target.value; renderList(); renderTable(); };
+$('onlyChanging').onchange = e => { S.onlyChanging = e.target.checked; renderList(); renderTable(); };
+$('preChanging').onclick = () => { UNION.filter(changes).forEach(u => S.selected.add(u.name)); renderList(); renderLanes(); renderTable(); };
+$('preClear').onclick = () => { S.selected.clear(); renderList(); renderLanes(); renderTable(); };
+$('tabGraph').onclick = () => setTab('graph'); $('tabValues').onclick = () => setTab('values');
+$('btnC2').onclick = () => {
+  if (S.c2 == null) { S.c2 = Math.min(totalN() - 1, S.cursor + Math.max(1, Math.round(totalN() * 0.05))); if (S.c2 === S.cursor) S.c2 = Math.max(0, S.cursor - 1); S.active = 2; S.live = 2; }
+  else { S.c2 = null; S.active = 1; if (S.live === 2) S.live = null; }
+  updateReadout(); if (S.tab === 'graph') { renderLanes(); } else updateTableValues();
+};
+$('ival').oninput = e => { const v = parseFloat(e.target.value); if (v > 0) { S.ival = v; updateReadout(); drawAll(); } };
+$('tdiv').oninput = e => { const v = parseFloat(e.target.value); S.tdiv = v > 0 ? v : 0; const sc = $('scroller'), n = totalN(), W0 = $('inner').clientWidth; const f = W0 ? (sc.scrollLeft + sc.clientWidth / 2) / W0 : 0; drawAll(); const W1 = $('inner').clientWidth; sc.scrollLeft = Math.max(0, f * W1 - sc.clientWidth / 2); ensureVisible(S.cursor); };
+$('laneh').oninput = e => { document.documentElement.style.setProperty('--laneh', e.target.value + 'px'); drawAll(); };
+$('btnFit').onclick = () => { S.tdiv = 0; $('tdiv').value = ''; drawAll(); $('scroller').scrollLeft = 0; };
+$('tstart').oninput = e => { const m = /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/.exec(e.target.value.trim()); S.startSec = m ? (+m[1]) * 3600 + (+m[2]) * 60 + (+(m[3] || 0)) : null; updateReadout(); };
+$('units').onchange = e => { S.units = e.target.checked; S.files.forEach(f => applyUnits(f, S.units)); afterFilesChanged(false); };
+$('boff').oninput = e => { const v = parseInt(e.target.value, 10); S.boff = isNaN(v) ? 0 : v; S.cursor = Math.min(S.cursor, totalN() - 1); renderLanes(); updateReadout(); updateTableValues(); };
+$('btnCsvSel').onclick = () => exportCSV(false); $('btnCsvAll').onclick = () => exportCSV(true);
+
+function pointerToIndex(e) {
+  const cv = e.target.closest ? e.target.closest('canvas') : null; if (!cv) return null;
+  const r = cv.getBoundingClientRect(); const n = totalN();
+  const f = (e.clientX - r.left - PAD.l) / Math.max(1, r.width - PAD.l - PAD.r);
+  return Math.round(Math.max(0, Math.min(1, f)) * (n - 1));
+}
+const stage = $('graphView'); let dragging = false;
+stage.addEventListener('contextmenu', e => e.preventDefault());
+stage.addEventListener('pointerdown', e => {
+  const k = pointerToIndex(e); if (k == null) return;
+  if (S.live) { S.active = S.live; setCursor(k); S.live = null; dragging = false; updateReadout(); return; }  // "Add cursor 2" button: next click places it (touch screens)
+  if (e.button === 2) { if (S.c2 == null) S.c2 = k; S.active = 2; }   // right click = cursor 2
+  else if (e.button === 0) S.active = 1;                              // left click = cursor 1
+  else return;
+  dragging = true; setCursor(k); updateReadout(); if (S.tab === 'graph') drawAll();
+});
+stage.addEventListener('pointermove', e => { if (!dragging) return; const k = pointerToIndex(e); if (k != null) setCursor(k); });
+window.addEventListener('pointerup', () => { dragging = false; });
+document.addEventListener('keydown', e => {
+  if (/INPUT|TEXTAREA/.test((document.activeElement || {}).tagName || '') && document.activeElement.type !== 'checkbox') return;
+  const step = e.shiftKey ? 5 : 1;
+  const here = () => (S.active === 2 && S.c2 != null) ? S.c2 : S.cursor;
+  if (e.key === 'ArrowLeft') { setCursor(here() - step); e.preventDefault(); }
+  else if (e.key === 'ArrowRight') { setCursor(here() + step); e.preventDefault(); }
+  else if (e.key === 'Home') { setCursor(0); e.preventDefault(); }
+  else if (e.key === 'End') { setCursor(totalN() - 1); e.preventDefault(); }
+  else if (e.key === '1' || e.key === '2') { if (e.key === '1' || S.c2 != null) { S.active = +e.key; updateReadout(); } }
+  else if (e.key === 'Escape') { S.live = null; updateReadout(); }
+});
+window.addEventListener('resize', () => { if (S.tab === 'graph') drawAll(); });
+try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => requestAnimationFrame(drawAll)); } catch (e) { /* older browsers */ }
+new MutationObserver(() => requestAnimationFrame(drawAll)).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
+</body></html>

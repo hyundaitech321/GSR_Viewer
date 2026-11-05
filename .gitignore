@@ -1,0 +1,26 @@
+# HMA / GIT data - never upload
+xef_out/
+*.xef
+*.git
+*.gsr
+*.gsrz
+*.msr
+*.vsf
+**/XML/
+**/LUT/
+
+GSR_VIEWER_FILES/
+HMA GDS Viewer/
+_private/key.txt
+_private/*.png
+*.jpg
+*.exe
+Refreshing the GSR Viewer Status Labels.docx
+test_pictures.docx
+original shared files/*.png
+
+_private/
+
+GSR-Viewer_*.html
+gds-viewer/assets/viewer.html
+original shared files/GSR-Viewer_0.41_FSE.html

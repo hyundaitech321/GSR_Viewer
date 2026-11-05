@@ -1,0 +1,16 @@
+[package]
+name = "gds-viewer"
+version = "0.1.0"
+edition = "2021"
+description = "GDS Recorded File Viewer (beta, internal use only): desktop wrapper around the HTML viewer"
+
+[dependencies]
+wry = "0.57"
+tao = "0.37"
+rfd = { version = "0.17", default-features = false }
+base64 = "0.22"
+
+[profile.release]
+opt-level = "s"
+lto = "thin"
+strip = true
